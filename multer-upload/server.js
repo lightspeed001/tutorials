@@ -72,7 +72,7 @@ app.post("/api/upload", (req, res, next) => {
 	}).single('file')
 	
 	upload(req, res, function(err){
-		var bitmap = fs.createReadStream('./uploads/' + req.file.filename);
+	var bitmap = fs.createReadStream('./uploads/' + req.file.filename);
 	var uu = uploadG(bitmap,req.file.filename);
 })
 })

@@ -1,12 +1,9 @@
 import fb from "firebase"
 import "firebase/firestore"
 var conf = {
-    apiKey: "AIzaSyAc-3BK1LI5cFEgin1XHTI0-ia9glG_agY",
-    authDomain: "fir-479ec.firebaseapp.com",
-    databaseURL: "https://fir-479ec.firebaseio.com",
-    projectId: "fir-479ec",
-    storageBucket: "fir-479ec.appspot.com",
-    messagingSenderId: "322792651330"
+/**
+Enter your fb details here
+**/
 }
 fb.initializeApp(conf);    
 var db = fb.firestore();
