@@ -9,15 +9,16 @@
            <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">	
         <router-link class="pure-menu-heading" to="/">Your Site</router-link>
-        <ul class="pure-menu-list">     
+        <ul class="pure-menu-list">  
+<!--		
 		     <li v-show="checkVis" class="pure-menu-item pure-form">
 			 <input type="text"  name="someThing" placeholder="Search" class="pure-input-rounded">
 			 <a id="searchB" href="#" class="pure-button"><icon name="search"></icon></a>   
-			 </li>
+			 </li>-->
             <li class="pure-menu-item"><router-link to="/" class="pure-menu-link">Home</router-link></li>
             <li class="pure-menu-item"><router-link to="explore" class="pure-menu-link">Tour</router-link></li>
             <li class="pure-menu-item"><router-link to="login" class="pure-menu-link">Login</router-link></li>
-			<li class="pure-menu-item" v-show="checkMain"><router-link to="settings" class="pure-menu-link"><icon name="home" scale="2"></icon></router-link></li>
+		<!--	<li class="pure-menu-item" v-show="checkMain"><router-link to="settings" class="pure-menu-link"><icon name="home" scale="2"></icon></router-link></li>-->
         </ul>
     </div>
 </div>   
@@ -59,8 +60,6 @@
 </template>
 
 <script>
-//const MainNav = () => import("./components/MainNav.vue")
-//const NavInfo = () => import("./components/NavInfo.vue") 
 export default {
   name: 'app',
  /**props: {
@@ -73,35 +72,21 @@ export default {
       }
   },
   computed: {
-  checkMain(){
-  //'/w/anotherjobpage'
-  //console.log(this.$route.path)
-  return  (this.isMain.indexOf(this.$route.path)>-1);   
+ /** checkMain(){
+  return (this.isMain.indexOf(this.$route.path)>-1);   
   },
   checkVis(){
   if(this.$route.path.indexOf('/w/')>-1){
-  //console.log('This is the user id: '+ this.$route.path.replace('/w/','')) => this is right
   return  true;   
   } else {return (this.isMain.indexOf(this.$route.path)>-1); }  
-  }
+  }**/
   },
   methods: {
       checkHome: function(){
           return (this.$router.name==='home');
       }
   }
- /** ,
-  computed:{
-  dynamicComponent() {  
- switch(this.$route.name){
- case 'home':
- return MainNav;
- case 'profile':
- return NavInfo;
- 
- }
-  }
-  }***/  
+
 }
 </script>
 

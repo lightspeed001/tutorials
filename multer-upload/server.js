@@ -35,11 +35,6 @@ fs.readir('./uploads', (err,files) =>{
 })
 }
 
-/**
-app.set('view engine','ejs')
-app.set('views',path.join( __dirname, './views'))
-**/
-
 if(process.env.NODE_ENV === 'development') {
     const webpack = require('webpack')
     const webpackDevMiddleware = require('webpack-dev-middleware')
@@ -50,8 +45,8 @@ if(process.env.NODE_ENV === 'development') {
         webpackDevMiddleware(compiler, {
             noInfo: true,
             publicPath: config.output.publicPath
-        });
-    )
+        }
+    ));
 	  app.use(require("webpack-hot-middleware")(compiler, {
     log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
   }));   

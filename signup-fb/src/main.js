@@ -3,7 +3,7 @@ import Router from 'vue-router'
 const Home = () => import('./components/home.vue')   
 const NotFound = () => import('./components/404.vue') 
 const Privacy = () => import('./components/privacy.vue')
-const Upload = () => import('./components/upload.vue')
+const Upload = () => import('./components/avatar.vue')
 const Signin = () => import('./components/signin.vue')
 const Signup = () => import('./components/signup.vue')
 
@@ -27,10 +27,10 @@ Vue.use(Toasted, {
     theme: 'bubble',
     position: 'top-right',
     duration: 2300
-}):
-Vue.use(Router);
- 
+})
+
 import VueProgressBar from 'vue-progressbar'
+
 Vue.use(VueProgressBar,{
     color: '#ADE027',
     failedColor: '#F43D41',
@@ -43,8 +43,9 @@ Vue.use(VueProgressBar,{
     autoRevert: true,
     location: 'top',
     inverse: false
-}); 
- 
+}) 
+
+Vue.use(Router);
 const router = new Router({
     mode: 'history',
     routes: [

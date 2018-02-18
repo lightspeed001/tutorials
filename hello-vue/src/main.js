@@ -13,6 +13,22 @@ import "vue-awesome/icons/search"
 import Icon from "vue-awesome/components/Icon.vue"
 Vue.component('icon',Icon);
 
+import VueProgressBar from 'vue-progressbar'
+Vue.use(VueProgressBar, {
+    color: '#ADE027',
+    failedColor: '#F43D41',
+    thickness: '5px',
+    transition: {
+        speed: '0.2s',
+        opacity: '0.6s',
+        termination: 300
+    },
+    autoRevert: true,
+    location: 'top',
+    inverse: false
+})
+
+Vue.use(Router);
 const router = new Router({
     mode: 'history',
     routes: [

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Upload |App</title> 
+    <!-- CSS  -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="/views/css/font-awesome.min.css">    
+  <link rel="stylesheet" href="/views/css/materialize.min.css">      
+
+    <style type="text/css">
+	   .jQuery-plainOverlay-progress {
+  border-color: #f44336 !important;
+}
+.jQuery-plainOverlay-progress-legacy div {
+  background-color: #f44336 !important;
+}   
+           .alert {
+                padding: 8px 35px 8px 14px; 
+                margin-bottom:2%;
+                   text-shadow: 0 1px 0 rgba(255,255,255,0.5); 
+                   background-color: #fcf8e3; 
+                   border: 1px solid #fbefd6; 
+                   -webkit-border-radius: 4px; 
+                   border-radius: 4px; 
+                   color: #c09853;
+}
+            .alert h1,.alert h2, .alert h3, .alert h4 {margin: 0;}
+            .alert-success {
+                background-color: #dff0d8; 
+                border-color: #d7eac8; 
+                color: #468847;}
+            .alert-danger,.alert-error {
+                background-color: #f2dede; 
+                border-color: #eed4d8; 
+                color: #b94a48;
+            }
+            .alert-info {
+                background-color: #d9edf7; 
+                border-color: #bee9f1; 
+                color: #3a87ad;
+            }
+            .alert-block {
+                padding-top: 14px; 
+                padding-bottom: 14px;
+            }
+            .alert-block > p,.dbootstrap .alert-block > ul {margin-bottom: 0;}
+            .alert-block p + p {margin-top: 5px;}
+    .nav li b {
+    padding: 15px 0;
+    display: none;
+}
+.nav a:hover {
+    color: #fff;
+}
+.nav a:hover i {
+    display: none;
+}
+.nav a:hover b {
+    display: block;
+}
+   .hidd{display:none;}
+  .input-field div.error{
+    position: relative;
+    top: -1rem;
+    left: 0rem;
+    font-size: 0.8rem;
+    color:#FF4081;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .input-field label.active{
+      width:100%;
+  }
+  .left-alert input[type=text] + label:after, 
+  .left-alert input[type=password] + label:after, 
+  .left-alert input[type=email] + label:after, 
+  .left-alert input[type=url] + label:after, 
+  .left-alert input[type=time] + label:after,
+  .left-alert input[type=date] + label:after, 
+  .left-alert input[type=datetime-local] + label:after, 
+  .left-alert input[type=tel] + label:after, 
+  .left-alert input[type=number] + label:after, 
+  .left-alert input[type=search] + label:after, 
+  .left-alert textarea.materialize-textarea + label:after{
+      left:0px;
+  }
+  .right-alert input[type=text] + label:after, 
+  .right-alert input[type=password] + label:after, 
+  .right-alert input[type=email] + label:after, 
+  .right-alert input[type=url] + label:after, 
+  .right-alert input[type=time] + label:after,
+  .right-alert input[type=date] + label:after, 
+  .right-alert input[type=datetime-local] + label:after, 
+  .right-alert input[type=tel] + label:after, 
+  .right-alert input[type=number] + label:after, 
+  .right-alert input[type=search] + label:after, 
+  .right-alert textarea.materialize-textarea + label:after{
+      right:70px;
+  }
+
+  input {
+    display: block;
+    margin: .5em auto 0em;
+    padding: 0.5em 1em 0.5em 0.7em;
+    width: 100%;
+    border: none;
+    background: rgba(0,0,0,0.05);
+    color: rgba(0,0,0,0.8);
+    font-size: 2em;
+    line-height: 0;
+    transition: all .5s linear;
+}
+
+input:hover, input:focus {
+  outline: 0;
+  transition: all .5s linear;
+  box-shadow: inset 0px 0px 10px #ccc;
+}
+
+meter {
+    /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+            
+  margin: 0 auto 1em;
+  width: 100%;
+  height: .5em;
+    
+    /* Applicable only to Firefox */
+  background: none;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.feedback {
+  color: #9ab;
+  font-size: 90%;
+  padding: 0 .25em;
+  font-family: Courgette, cursive;
+  margin-top: 1em;
+}
+.hidd {display:none;}
+  </style>
+
+    </head>
+    <body>
+       <div class="navbar-fixed">
+    <nav class="indigo" role="navigation">
+    <div class="nav-wrapper nav">
+        <a id="logo-container"  href="/" class="brand-logo" >App Upload</a>
+      <ul class="right hide-on-med-and-down">
+          <li><a id="navLog" href="/"><i class="icon fa fa-home fa-2x" style="color:white;"></i><b>Home</b></a></li>
+          <li><a id="navInfo" href="/about.html"><i class="icon fa fa-info-circle fa-2x" style="color:white;"></i><b>About</b></a></li>
+          <li><a id="liUser" style="color:white;font-weight: bold;">Some User</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>    
+          <div class="section no-pad-bot">
+              <div class="container">
+                  <div class="row center">
+                      <div class="col s6">
+                          <div class="card-panel" id="imageP">
+<div  class="row">
+<div class="col s12">
+<div class="row">
+  <div class="col s12">
+      <img src="/views/img/camera.png" style="height:80px;width:80px;display:block;margin:auto;margin-right: auto">
+  </div>    
+</div>
+<div class="row">
+  <div class="col s12">
+    <form action="" id="upload">
+<fieldset>
+    <legend style="display:none;">Upload Image</legend>
+    <p style="display:none;">
+      <label for="upload_preset">Unsigned upload Preset: <input type="text" name="upload_preset" value="" id="upload_preset">(set it <a href="https://cloudinary.com/console/settings/upload#upload_presets">here</a>)</label>
+    </p>
+  <div class="file-field input-field">
+    <div class="btn cyan">
+      <span>Image</span>
+       <input type="file" name="file" id="file">
+    </div>
+    <div class="file-path-wrapper">
+      <input id="update_val" type="text" class="file-path validate" placeholder="Select an image">
+    </div>
+  </div>
+    <br />
+  </fieldset>
+</form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+       <a id="upButt" style="color:white;" class="btn btn-flat btn-large waves-effect indigo">
+        <i class="fa fa-send-o left" style="color:white;"></i> Submit
+      </a>
+  </div>
+</div>
+
+</div>
+
+  
+
+</div>
+
+<div id="resDiv" class="row hidd">
+  <div  class="col s12"></div>
+            </div>
+        
+</div>
+                      </div>
+  <div class="col s6">
+      <div  class="card center">
+          <form>   
+              <input id="results" />
+          </form>
+        
+      </div>
+  </div>
+                  </div>
+              </div>
+          </div>  
+   <script src="/views/js/jquery-2.1.4.min.js"></script>
+   <script src="/views/js/jquery.plainoverlay.min.js"></script>
+   <script src="/views/js/materialize.js"></script>
+ <script>
+$(function(){
+
+        var getUU = function(){
+function _p8(s){
+var p = (Math.random().toString(16)+"000000000").substr(2,8);
+return s? "-" + p.substr(0,4) + "-" + p.substr(4,4):p;
+}
+return _p8()+_p8(true) + _p8(true) + _p8();
+}
+        String.prototype.startsWith = function(n){
+return (this.indexOf(n) === 0);
+}
+
+String.prototype.hasSpace= function(s){
+return s.indexOf(' ') >= 0;
+}
+var otherMsg = function(msg){
+return Materialize.toast(msg,4000)
+}
+
+var regStand  = $('#upload').plainOverlay({opacity:0.3});
+	   
+ window.ajaxSuccess = function (response) {
+  console.log(response);
+$('#results').val(response['url'])  
+ $('#upload')[0].reset()
+ regStand.hide()
+}
+
+var upp = 0;
+$('#upButt').on('click',function(event){
+     event.stopImmediatePropagation()
+      event.preventDefault();
+// send to back-end here!!!
+});
+    $('#results').on('click',function(){
+        document.getElementById('results').select()
+    })
+    })
+</script> 
+ 
+</body> 
+</html>

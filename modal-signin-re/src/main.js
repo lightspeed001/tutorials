@@ -3,7 +3,7 @@ import Router from 'vue-router'
 const Home = () => import('./components/home.vue')   
 const NotFound = () => import('./components/404.vue') 
 const Privacy = () => import('./components/privacy.vue')
-const Upload = () => import('./components/upload.vue')
+const Upload = () => import('./components/avatar.vue')
 
 import "./assets/css/pure-min.css"
 import "./assets/css/grids-responsive-min.css"
@@ -22,7 +22,8 @@ Vue.use(Toasted, {
     theme: 'bubble',
     position: 'top-right',
     duration: 2300
-}):
+})
+
 Vue.use(Router);
  
 import VueProgressBar from 'vue-progressbar'

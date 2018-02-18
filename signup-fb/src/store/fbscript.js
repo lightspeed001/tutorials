@@ -2,7 +2,7 @@ import fb from "firebase"
 import "firebase/firestore"
 var conf = {
 /**
-Enter your fb details here
+Your firebase details here :)
 **/
 }
 fb.initializeApp(conf);    
